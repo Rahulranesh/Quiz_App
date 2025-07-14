@@ -2,17 +2,18 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import '../models/quiz_models.dart';
 import 'local_question_generator.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class DynamicQuestionGenerator {
   // You can set your OpenAI API key here or use environment variables
-  static const String _openaiApiKey = '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';
   static const String _openaiUrl = 'https://api.openai.com/v1/chat/completions';
   
   // Check if API key is valid
   static bool get isApiKeyValid {
-    return _openaiApiKey.isNotEmpty && 
-           _openaiApiKey != 'YOUR_OPENAI_API_KEY' && 
-           _openaiApiKey.length > 20;
+    final apiKey = dotenv.env['OPENAI_API_KEY'];
+    return apiKey != null && apiKey.isNotEmpty && 
+           apiKey != 'YOUR_OPENAI_API_KEY' && 
+           apiKey.length > 20;
   }
   
   static Future<List<Question>> generateQuestionsFromContent(String content, String category, {String language = 'en'}) async {
@@ -52,6 +53,11 @@ class DynamicQuestionGenerator {
       return generateFallbackQuestions(category);
     }
     
+    final apiKey = dotenv.env['OPENAI_API_KEY'];
+    if (apiKey == null || apiKey.isEmpty) {
+      throw Exception('OpenAI API key not found. Please set OPENAI_API_KEY in your .env file.');
+    }
+
     // Truncate content if too long but keep more content for better questions
     final truncatedContent = content.length > 3000 ? content.substring(0, 3000) + '...' : content;
     
@@ -99,7 +105,7 @@ class DynamicQuestionGenerator {
         Uri.parse(_openaiUrl),
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer $_openaiApiKey',
+          'Authorization': 'Bearer $apiKey',
         },
         body: jsonEncode({
           'model': 'gpt-3.5-turbo',
@@ -167,6 +173,11 @@ class DynamicQuestionGenerator {
       return LocalQuestionGenerator.validateAnswer(question, userAnswer, correctAnswer, bookContent);
     }
     
+    final apiKey = dotenv.env['OPENAI_API_KEY'];
+    if (apiKey == null || apiKey.isEmpty) {
+      throw Exception('OpenAI API key not found. Please set OPENAI_API_KEY in your .env file.');
+    }
+
     final prompt = '''
     Based on the following AdTech book content, validate if the user's answer is correct.
     
@@ -187,7 +198,7 @@ class DynamicQuestionGenerator {
         Uri.parse(_openaiUrl),
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer $_openaiApiKey',
+          'Authorization': 'Bearer $apiKey',
         },
         body: jsonEncode({
           'model': 'gpt-3.5-turbo',
@@ -222,6 +233,11 @@ class DynamicQuestionGenerator {
       return LocalQuestionGenerator.generateExplanation(question, answer, bookContent);
     }
     
+    final apiKey = dotenv.env['OPENAI_API_KEY'];
+    if (apiKey == null || apiKey.isEmpty) {
+      throw Exception('OpenAI API key not found. Please set OPENAI_API_KEY in your .env file.');
+    }
+
     final prompt = '''
     Based on the following AdTech book content, provide a clear explanation for the answer to this question.
     
@@ -238,7 +254,7 @@ class DynamicQuestionGenerator {
         Uri.parse(_openaiUrl),
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer $_openaiApiKey',
+          'Authorization': 'Bearer $apiKey',
         },
         body: jsonEncode({
           'model': 'gpt-3.5-turbo',
@@ -1092,12 +1108,17 @@ class DynamicQuestionGenerator {
       return false;
     }
     
+    final apiKey = dotenv.env['OPENAI_API_KEY'];
+    if (apiKey == null || apiKey.isEmpty) {
+      throw Exception('OpenAI API key not found. Please set OPENAI_API_KEY in your .env file.');
+    }
+
     try {
       final response = await http.post(
         Uri.parse(_openaiUrl),
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer $_openaiApiKey',
+          'Authorization': 'Bearer $apiKey',
         },
         body: jsonEncode({
           'model': 'gpt-3.5-turbo',
