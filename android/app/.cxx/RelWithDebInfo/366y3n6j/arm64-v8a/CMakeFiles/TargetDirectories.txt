@@ -1,0 +1,2 @@
+/home/ranesh/Desktop/c1x/quiz_app/android/app/.cxx/RelWithDebInfo/366y3n6j/arm64-v8a/CMakeFiles/edit_cache.dir
+/home/ranesh/Desktop/c1x/quiz_app/android/app/.cxx/RelWithDebInfo/366y3n6j/arm64-v8a/CMakeFiles/rebuild_cache.dir
