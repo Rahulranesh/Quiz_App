@@ -48,6 +48,30 @@ class PDFContentExtractor {
       'attribution model', 'touchpoint', 'customer attribution',
       'conversion attribution', 'journey tracking', 'attribution data'
     ],
+    'Marketing Automation': [
+      'marketing automation', 'automation', 'workflow', 'lead nurturing', 'drip campaign', 'automated marketing', 'triggered email', 'customer journey', 'automation platform'
+    ],
+    'CRM': [
+      'crm', 'customer relationship management', 'salesforce', 'hubspot', 'customer data', 'contact management', 'pipeline', 'deal', 'lead', 'opportunity', 'account', 'crm system'
+    ],
+    'Email Marketing': [
+      'email marketing', 'newsletter', 'email campaign', 'open rate', 'click rate', 'mailchimp', 'email automation', 'subscriber', 'email list', 'email platform'
+    ],
+    'Content Marketing': [
+      'content marketing', 'blog', 'whitepaper', 'ebook', 'infographic', 'content strategy', 'content creation', 'content distribution', 'editorial calendar', 'content platform'
+    ],
+    'Social Media Marketing': [
+      'social media', 'facebook', 'twitter', 'linkedin', 'instagram', 'social campaign', 'social platform', 'social analytics', 'social engagement', 'social post'
+    ],
+    'Web Analytics': [
+      'web analytics', 'google analytics', 'tracking code', 'conversion rate', 'bounce rate', 'session', 'pageview', 'analytics platform', 'data visualization', 'reporting'
+    ],
+    'Customer Data Platforms': [
+      'cdp', 'customer data platform', 'unified customer profile', 'data integration', 'identity resolution', 'segmentation', 'customer insights', 'cdp vendor'
+    ],
+    'Personalization & A/B Testing': [
+      'personalization', 'a/b testing', 'split test', 'multivariate test', 'recommendation engine', 'dynamic content', 'user experience', 'experiment', 'test group', 'control group'
+    ],
   };
   
   static Future<void> initialize() async {
@@ -206,6 +230,33 @@ class PDFContentExtractor {
         Last-click attribution gives all credit to the final touchpoint before conversion, while first-click attribution gives all credit to the initial touchpoint. Both models have limitations and may not accurately reflect the true contribution of each touchpoint.
       ''',
     };
+    _chapterContent.addAll({
+      // MarTech
+      'Marketing Automation': '''
+        Marketing automation refers to software platforms and technologies designed for marketing departments and organizations to more effectively market on multiple channels online and automate repetitive tasks. It includes workflows, lead nurturing, triggered emails, and customer journey mapping.
+      ''',
+      'CRM': '''
+        Customer Relationship Management (CRM) systems help businesses manage, track, and organize customer relationships. They centralize customer information, track interactions, and manage sales pipelines, leads, and opportunities.
+      ''',
+      'Email Marketing': '''
+        Email marketing is the use of email to promote products or services while developing relationships with potential customers or clients. It includes newsletters, promotional campaigns, and automated email sequences.
+      ''',
+      'Content Marketing': '''
+        Content marketing is a strategic approach focused on creating and distributing valuable, relevant, and consistent content to attract and retain a clearly defined audience. It includes blogs, whitepapers, ebooks, and infographics.
+      ''',
+      'Social Media Marketing': '''
+        Social media marketing uses platforms like Facebook, Twitter, LinkedIn, and Instagram to promote products, engage with audiences, and build brand awareness. It involves content creation, campaign management, and analytics.
+      ''',
+      'Web Analytics': '''
+        Web analytics is the measurement, collection, analysis, and reporting of web data to understand and optimize web usage. It includes tools like Google Analytics, conversion tracking, and data visualization.
+      ''',
+      'Customer Data Platforms': '''
+        Customer Data Platforms (CDPs) are software systems that collect and unify customer data from multiple sources to build a single, comprehensive customer profile. They enable segmentation, personalization, and advanced analytics.
+      ''',
+      'Personalization & A/B Testing': '''
+        Personalization tailors marketing messages and experiences to individual users. A/B testing (split testing) compares two versions of a webpage or app to see which performs better, helping optimize user experience and conversion rates.
+      ''',
+    });
   }
   
   static Future<String> getContentForCategory(String category) async {

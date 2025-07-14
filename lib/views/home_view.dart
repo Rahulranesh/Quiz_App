@@ -372,27 +372,33 @@ class _HomeViewState extends State<HomeView> {
           ),
         ),
         const SizedBox(height: 12),
-        GridView.builder(
-          shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            crossAxisSpacing: 12,
-            mainAxisSpacing: 12,
-            childAspectRatio: 1.2,
-          ),
-          itemCount: categories.length,
-          itemBuilder: (context, index) {
-            final category = categories[index];
-            final isCompleted = progressController.isCategoryCompleted(category);
-            final questionCount = settingsController.questionsPerQuiz.value;
-            
-            return _buildCategoryCard(
-              context,
-              category,
-              questionCount,
-              isCompleted,
-              () => _startCategoryQuiz(quizController, category),
+        LayoutBuilder(
+          builder: (context, constraints) {
+            int crossAxisCount = constraints.maxWidth > 600 ? 3 : 2;
+            double aspectRatio = constraints.maxWidth > 600 ? 1.4 : 1.2;
+            return GridView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: crossAxisCount,
+                crossAxisSpacing: 12,
+                mainAxisSpacing: 12,
+                childAspectRatio: aspectRatio,
+              ),
+              itemCount: categories.length,
+              itemBuilder: (context, index) {
+                final category = categories[index];
+                final isCompleted = progressController.isCategoryCompleted(category);
+                final questionCount = settingsController.questionsPerQuiz.value;
+                
+                return _buildCategoryCard(
+                  context,
+                  category,
+                  questionCount,
+                  isCompleted,
+                  () => _startCategoryQuiz(quizController, category),
+                );
+              },
             );
           },
         ),
@@ -434,6 +440,8 @@ class _HomeViewState extends State<HomeView> {
                 style: Theme.of(context).textTheme.titleSmall?.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
               ),
               const SizedBox(height: 4),
               Text(
@@ -441,6 +449,8 @@ class _HomeViewState extends State<HomeView> {
                 style: Theme.of(context).textTheme.bodySmall?.copyWith(
                   color: Theme.of(context).colorScheme.onSurface.withOpacity(0.6),
                 ),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
               ),
               if (isCompleted) ...[
                 const SizedBox(height: 4),

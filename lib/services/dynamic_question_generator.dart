@@ -532,7 +532,167 @@ class DynamicQuestionGenerator {
           'correctAnswerIndex': 0,
           'explanation': 'First-click attribution gives all credit to the initial touchpoint, which may not accurately reflect the true contribution of each touchpoint.'
         }
-      ]
+      ],
+      'Personalization & A/B Testing': [
+        {
+          'question': 'What is the main goal of personalization in marketing?',
+          'options': ['To tailor messages to individual users', 'To automate workflows', 'To increase ad spend', 'To reduce content creation'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Personalization aims to deliver relevant content and experiences to each user based on their preferences and behavior.'
+        },
+        {
+          'question': 'What does A/B testing help marketers determine?',
+          'options': ['Which version of content performs better', 'How to automate emails', 'The best CRM vendor', 'The most popular social network'],
+          'correctAnswerIndex': 0,
+          'explanation': 'A/B testing compares two versions of a webpage or app to see which one achieves better results.'
+        },
+        {
+          'question': 'Which of the following is NOT a use case for A/B testing?',
+          'options': ['Choosing a subject line', 'Optimizing landing pages', 'Managing customer data', 'Testing call-to-action buttons'],
+          'correctAnswerIndex': 2,
+          'explanation': 'Managing customer data is not a direct use case for A/B testing.'
+        },
+      ],
+      'Marketing Automation': [
+        {
+          'question': 'What is marketing automation primarily used for?',
+          'options': ['Automating repetitive marketing tasks', 'Designing websites', 'Managing payroll', 'Creating ad creatives'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Marketing automation platforms help automate tasks like email campaigns, lead nurturing, and workflow management.'
+        },
+        {
+          'question': 'Which of the following is a feature of marketing automation?',
+          'options': ['Lead nurturing', 'Manual data entry', 'Offline advertising', 'Print media management'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Lead nurturing is a core feature of marketing automation platforms.'
+        },
+        {
+          'question': 'What is a drip campaign?',
+          'options': ['A series of automated emails sent over time', 'A type of social media ad', 'A CRM feature', 'A web analytics tool'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Drip campaigns are automated sets of emails sent based on specific timelines or user actions.'
+        },
+      ],
+      'CRM': [
+        {
+          'question': 'What does CRM stand for?',
+          'options': ['Customer Relationship Management', 'Content Resource Management', 'Campaign Reporting Mechanism', 'Customer Retention Model'],
+          'correctAnswerIndex': 0,
+          'explanation': 'CRM stands for Customer Relationship Management.'
+        },
+        {
+          'question': 'Which of the following is a primary function of a CRM system?',
+          'options': ['Managing customer data', 'Sending mass emails', 'Designing websites', 'Running A/B tests'],
+          'correctAnswerIndex': 0,
+          'explanation': 'CRM systems are used to manage and analyze customer interactions and data.'
+        },
+        {
+          'question': 'Which company is known for its CRM platform?',
+          'options': ['Salesforce', 'Mailchimp', 'Google Analytics', 'WordPress'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Salesforce is a leading CRM platform.'
+        },
+      ],
+      'Email Marketing': [
+        {
+          'question': 'What is a common metric to measure email marketing success?',
+          'options': ['Open rate', 'Page load time', 'Ad impressions', 'Bounce rate'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Open rate measures how many recipients open an email.'
+        },
+        {
+          'question': 'Which tool is widely used for email marketing?',
+          'options': ['Mailchimp', 'Salesforce', 'Google Ads', 'Figma'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Mailchimp is a popular email marketing platform.'
+        },
+        {
+          'question': 'What is a subscriber list?',
+          'options': ['A list of people who have opted in to receive emails', 'A list of website pages', 'A list of ad campaigns', 'A list of CRM contacts only'],
+          'correctAnswerIndex': 0,
+          'explanation': 'A subscriber list is a collection of email addresses of people who have opted in to receive communications.'
+        },
+      ],
+      'Content Marketing': [
+        {
+          'question': 'What is the main goal of content marketing?',
+          'options': ['To attract and retain a clearly defined audience', 'To increase ad spend', 'To automate emails', 'To manage payroll'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Content marketing aims to attract and retain customers by creating valuable content.'
+        },
+        {
+          'question': 'Which of the following is a content marketing format?',
+          'options': ['Blog post', 'TV commercial', 'Billboard', 'Direct mail'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Blog posts are a common format in content marketing.'
+        },
+        {
+          'question': 'What is an editorial calendar used for?',
+          'options': ['Planning and scheduling content', 'Tracking ad spend', 'Managing CRM contacts', 'Running A/B tests'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Editorial calendars help marketers plan and schedule content publication.'
+        },
+      ],
+      'Social Media Marketing': [
+        {
+          'question': 'Which platform is commonly used for B2B social media marketing?',
+          'options': ['LinkedIn', 'Instagram', 'Snapchat', 'Pinterest'],
+          'correctAnswerIndex': 0,
+          'explanation': 'LinkedIn is widely used for B2B social media marketing.'
+        },
+        {
+          'question': 'What is a social media campaign?',
+          'options': ['A coordinated marketing effort on one or more platforms', 'A type of email automation', 'A CRM feature', 'A web analytics tool'],
+          'correctAnswerIndex': 0,
+          'explanation': 'A social media campaign is a coordinated effort to reinforce or assist with a business goal using one or more social media platforms.'
+        },
+        {
+          'question': 'What does engagement mean in social media marketing?',
+          'options': ['Interactions such as likes, comments, and shares', 'Number of emails sent', 'Website bounce rate', 'CRM pipeline stages'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Engagement refers to how users interact with social media content.'
+        },
+      ],
+      'Web Analytics': [
+        {
+          'question': 'What is bounce rate in web analytics?',
+          'options': ['The percentage of visitors who leave after viewing one page', 'The number of emails opened', 'The number of social media likes', 'The number of CRM contacts'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Bounce rate measures the percentage of visitors who navigate away after viewing only one page.'
+        },
+        {
+          'question': 'Which tool is commonly used for web analytics?',
+          'options': ['Google Analytics', 'Salesforce', 'Mailchimp', 'HubSpot'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Google Analytics is a leading web analytics tool.'
+        },
+        {
+          'question': 'What does a conversion rate measure?',
+          'options': ['The percentage of visitors who complete a desired action', 'The number of emails sent', 'The number of social posts', 'The number of CRM deals'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Conversion rate measures how many visitors complete a desired goal out of the total number of visitors.'
+        },
+      ],
+      'Customer Data Platforms': [
+        {
+          'question': 'What is a Customer Data Platform (CDP)?',
+          'options': ['A system that unifies customer data from multiple sources', 'A type of CRM', 'An email marketing tool', 'A web analytics platform'],
+          'correctAnswerIndex': 0,
+          'explanation': 'A CDP collects and unifies customer data from multiple sources to create a single customer profile.'
+        },
+        {
+          'question': 'Which of the following is a benefit of using a CDP?',
+          'options': ['Better segmentation and personalization', 'Increased ad spend', 'Automated payroll', 'Manual data entry'],
+          'correctAnswerIndex': 0,
+          'explanation': 'CDPs enable better segmentation and personalization for marketing.'
+        },
+        {
+          'question': 'What is identity resolution in the context of CDPs?',
+          'options': ['Matching data from different sources to the same customer', 'Sending automated emails', 'Running A/B tests', 'Managing social media'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Identity resolution is the process of matching data from different sources to a single customer profile.'
+        },
+      ],
     };
   }
 
@@ -761,7 +921,167 @@ class DynamicQuestionGenerator {
           'correctAnswerIndex': 0,
           'explanation': 'ファーストクリックアトリビューションは、すべてのクレジットを初期タッチポイントに与えますが、各タッチポイントの真の貢献を正確に反映しない可能性があります。'
         }
-      ]
+      ],
+      'Personalization & A/B Testing': [
+        {
+          'question': 'What is the main goal of personalization in marketing?',
+          'options': ['To tailor messages to individual users', 'To automate workflows', 'To increase ad spend', 'To reduce content creation'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Personalization aims to deliver relevant content and experiences to each user based on their preferences and behavior.'
+        },
+        {
+          'question': 'What does A/B testing help marketers determine?',
+          'options': ['Which version of content performs better', 'How to automate emails', 'The best CRM vendor', 'The most popular social network'],
+          'correctAnswerIndex': 0,
+          'explanation': 'A/B testing compares two versions of a webpage or app to see which one achieves better results.'
+        },
+        {
+          'question': 'Which of the following is NOT a use case for A/B testing?',
+          'options': ['Choosing a subject line', 'Optimizing landing pages', 'Managing customer data', 'Testing call-to-action buttons'],
+          'correctAnswerIndex': 2,
+          'explanation': 'Managing customer data is not a direct use case for A/B testing.'
+        },
+      ],
+      'Marketing Automation': [
+        {
+          'question': 'What is marketing automation primarily used for?',
+          'options': ['Automating repetitive marketing tasks', 'Designing websites', 'Managing payroll', 'Creating ad creatives'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Marketing automation platforms help automate tasks like email campaigns, lead nurturing, and workflow management.'
+        },
+        {
+          'question': 'Which of the following is a feature of marketing automation?',
+          'options': ['Lead nurturing', 'Manual data entry', 'Offline advertising', 'Print media management'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Lead nurturing is a core feature of marketing automation platforms.'
+        },
+        {
+          'question': 'What is a drip campaign?',
+          'options': ['A series of automated emails sent over time', 'A type of social media ad', 'A CRM feature', 'A web analytics tool'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Drip campaigns are automated sets of emails sent based on specific timelines or user actions.'
+        },
+      ],
+      'CRM': [
+        {
+          'question': 'What does CRM stand for?',
+          'options': ['Customer Relationship Management', 'Content Resource Management', 'Campaign Reporting Mechanism', 'Customer Retention Model'],
+          'correctAnswerIndex': 0,
+          'explanation': 'CRM stands for Customer Relationship Management.'
+        },
+        {
+          'question': 'Which of the following is a primary function of a CRM system?',
+          'options': ['Managing customer data', 'Sending mass emails', 'Designing websites', 'Running A/B tests'],
+          'correctAnswerIndex': 0,
+          'explanation': 'CRM systems are used to manage and analyze customer interactions and data.'
+        },
+        {
+          'question': 'Which company is known for its CRM platform?',
+          'options': ['Salesforce', 'Mailchimp', 'Google Analytics', 'WordPress'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Salesforce is a leading CRM platform.'
+        },
+      ],
+      'Email Marketing': [
+        {
+          'question': 'What is a common metric to measure email marketing success?',
+          'options': ['Open rate', 'Page load time', 'Ad impressions', 'Bounce rate'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Open rate measures how many recipients open an email.'
+        },
+        {
+          'question': 'Which tool is widely used for email marketing?',
+          'options': ['Mailchimp', 'Salesforce', 'Google Ads', 'Figma'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Mailchimp is a popular email marketing platform.'
+        },
+        {
+          'question': 'What is a subscriber list?',
+          'options': ['A list of people who have opted in to receive emails', 'A list of website pages', 'A list of ad campaigns', 'A list of CRM contacts only'],
+          'correctAnswerIndex': 0,
+          'explanation': 'A subscriber list is a collection of email addresses of people who have opted in to receive communications.'
+        },
+      ],
+      'Content Marketing': [
+        {
+          'question': 'What is the main goal of content marketing?',
+          'options': ['To attract and retain a clearly defined audience', 'To increase ad spend', 'To automate emails', 'To manage payroll'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Content marketing aims to attract and retain customers by creating valuable content.'
+        },
+        {
+          'question': 'Which of the following is a content marketing format?',
+          'options': ['Blog post', 'TV commercial', 'Billboard', 'Direct mail'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Blog posts are a common format in content marketing.'
+        },
+        {
+          'question': 'What is an editorial calendar used for?',
+          'options': ['Planning and scheduling content', 'Tracking ad spend', 'Managing CRM contacts', 'Running A/B tests'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Editorial calendars help marketers plan and schedule content publication.'
+        },
+      ],
+      'Social Media Marketing': [
+        {
+          'question': 'Which platform is commonly used for B2B social media marketing?',
+          'options': ['LinkedIn', 'Instagram', 'Snapchat', 'Pinterest'],
+          'correctAnswerIndex': 0,
+          'explanation': 'LinkedIn is widely used for B2B social media marketing.'
+        },
+        {
+          'question': 'What is a social media campaign?',
+          'options': ['A coordinated marketing effort on one or more platforms', 'A type of email automation', 'A CRM feature', 'A web analytics tool'],
+          'correctAnswerIndex': 0,
+          'explanation': 'A social media campaign is a coordinated effort to reinforce or assist with a business goal using one or more social media platforms.'
+        },
+        {
+          'question': 'What does engagement mean in social media marketing?',
+          'options': ['Interactions such as likes, comments, and shares', 'Number of emails sent', 'Website bounce rate', 'CRM pipeline stages'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Engagement refers to how users interact with social media content.'
+        },
+      ],
+      'Web Analytics': [
+        {
+          'question': 'What is bounce rate in web analytics?',
+          'options': ['The percentage of visitors who leave after viewing one page', 'The number of emails opened', 'The number of social media likes', 'The number of CRM contacts'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Bounce rate measures the percentage of visitors who navigate away after viewing only one page.'
+        },
+        {
+          'question': 'Which tool is commonly used for web analytics?',
+          'options': ['Google Analytics', 'Salesforce', 'Mailchimp', 'HubSpot'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Google Analytics is a leading web analytics tool.'
+        },
+        {
+          'question': 'What does a conversion rate measure?',
+          'options': ['The percentage of visitors who complete a desired action', 'The number of emails sent', 'The number of social posts', 'The number of CRM deals'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Conversion rate measures how many visitors complete a desired goal out of the total number of visitors.'
+        },
+      ],
+      'Customer Data Platforms': [
+        {
+          'question': 'What is a Customer Data Platform (CDP)?',
+          'options': ['A system that unifies customer data from multiple sources', 'A type of CRM', 'An email marketing tool', 'A web analytics platform'],
+          'correctAnswerIndex': 0,
+          'explanation': 'A CDP collects and unifies customer data from multiple sources to create a single customer profile.'
+        },
+        {
+          'question': 'Which of the following is a benefit of using a CDP?',
+          'options': ['Better segmentation and personalization', 'Increased ad spend', 'Automated payroll', 'Manual data entry'],
+          'correctAnswerIndex': 0,
+          'explanation': 'CDPs enable better segmentation and personalization for marketing.'
+        },
+        {
+          'question': 'What is identity resolution in the context of CDPs?',
+          'options': ['Matching data from different sources to the same customer', 'Sending automated emails', 'Running A/B tests', 'Managing social media'],
+          'correctAnswerIndex': 0,
+          'explanation': 'Identity resolution is the process of matching data from different sources to a single customer profile.'
+        },
+      ],
     };
   }
 

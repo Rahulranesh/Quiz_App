@@ -14,7 +14,16 @@ class QuizDataService {
       'Media Buying',
       'User Identification',
       'Ad Fraud and Privacy',
-    'Attribution'
+      'Attribution',
+      // MarTech categories
+      'Marketing Automation',
+      'CRM',
+      'Email Marketing',
+      'Content Marketing',
+      'Social Media Marketing',
+      'Web Analytics',
+      'Customer Data Platforms',
+      'Personalization & A/B Testing',
     ];
     
   Future<List<Question>> getQuestionsForCategory(String category, {int count = 5, String language = 'en'}) async {
